@@ -14,21 +14,21 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: user
-          uri: lb://user
+        - id: users
+          uri: lb://users
           predicates:
-            - Path=/user/**
+            - Path=/users/**
           filters:
             - StripPrefix=1
-        - id: note
-          uri: lb://note
+        - id: films
+          uri: lb://films
           predicates:
-            - Path=/note/**
+            - Path=/films/**
           filters:
             - StripPrefix=1
-        - id: comment
-          uri: lb://comment
+        - id: tickets
+          uri: lb://tickets
           predicates:
-            - Path=/comment/**
+            - Path=/tickets/**
           filters:
             - StripPrefix=1
