@@ -7,5 +7,5 @@ RUN mvn clean install
 FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 EXPOSE 8084
-COPY --from=builder /app/target/*.jar api-gateway.jar
-ENTRYPOINT ["java", "-jar", "api-gateway.jar" ]
+COPY --from=builder /app/target/*.jar gateway.jar
+ENTRYPOINT ["java", "-jar", "gateway.jar" ]
