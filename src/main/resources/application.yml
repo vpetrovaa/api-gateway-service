@@ -32,3 +32,9 @@ spring:
             - Path=/tickets/**
           filters:
             - StripPrefix=1
+        - id: esearch
+          uri: lb://esearch
+          predicates:
+            - Path=/esearch/**
+          filters:
+            - StripPrefix=1
